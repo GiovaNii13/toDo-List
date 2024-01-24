@@ -1,0 +1,208 @@
+.listas {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 10%;
+    margin-top: 10vh;
+    padding-top: 20px;
+    margin: 30px 70px;
+    li {
+        width: 250px;
+        word-wrap: break-word;
+    }
+    h2 {
+        font-size: 30px;
+        text-align: center;
+        padding-bottom: 10px;
+        font-weight: bold;
+        transition: .5;
+        margin-bottom: 20px;
+    }
+
+    .to-do-list {
+        width: 350px;
+        box-shadow: 0 0 4px 5px lightgray;
+        min-height: 450px;
+        padding: 5px 10px;
+        text-align: center;
+        border-radius: 15px;
+
+        .container__doDelete {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            column-gap: 8px;
+            &:hover {
+                svg {
+                    cursor: pointer;
+                }
+            }
+
+            .add__in--doing {
+                display: flex;
+                svg {
+                    &:hover{
+                        +p {
+                            display: block;
+                        }
+                    }
+                }
+                p {
+                    //display: none;
+                    text-align: center;
+                    width: 100px;
+                    height: 50px;
+                    background-color: gray;
+                }
+            }
+        }
+
+        li {
+            text-align: start;
+            border: solid black .5px;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 15px 0;
+            font-size: 20px;
+            column-gap: 20px;
+            transition: .5s;
+            &:hover {
+                background-color: rgb(100, 7, 7);
+                color: white;
+                svg {
+                    fill: white;
+                }
+            }
+        }
+
+        .to__do--new-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: gray;
+            column-gap: 10px;
+            padding: 8px;
+            transition: .3s;
+            &:hover {
+                cursor: pointer;
+                color: black;
+                padding: 10px;
+                border-radius: 10px;
+                box-shadow: 0 3px 15px 1px gray;
+                svg {
+                    fill: black;
+                }
+            }
+        }
+
+        .container__inputOn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .inputOn {
+                padding: 10px;
+                width: 100%;
+                border-radius: 10px;
+            }
+
+            .confirm-cancel {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 10px;
+                width: 70px;
+                svg {
+                    transition: .3s;
+                    &:hover {
+                        zoom: 1.1;
+                        border-radius: 20px;
+                        box-shadow: 0 1px 2px 2px gray;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .message__error {
+                width: 240px;
+                border: 1px solid red;
+                border-radius: 5px;
+                color: red;
+                font-weight: bold;
+                height: 45px;
+                text-align: center;
+                margin-top: 10px;
+                padding-top: 11px;
+            }
+        }
+    }
+
+    .doing-list {
+        width: 350px;
+        box-shadow: 0 0 4px 5px lightgray;
+        min-height: 450px;
+        padding: 5px 10px;
+        text-align: center;
+        border-radius: 15px;
+
+        .container__doingDelete {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            column-gap: 8px;
+            &:hover {
+                svg {
+                    zoom: 1.1;
+                    cursor: pointer;
+                }
+            }
+        }
+        li {
+            border: solid black .5px;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 15px 0;
+            font-size: 20px;
+            &:hover {
+                background-color: rgb(148, 148, 42);
+                
+            }
+        }
+    }
+
+    .done-list {
+        width:350px;
+        box-shadow: 0 0 4px 5px lightgray;
+        min-height: 450px;
+        padding: 5px 10px;
+        text-align: center;
+        border-radius: 15px;
+
+        .container__doneDelete {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            column-gap: 8px;
+            &:hover {
+                svg {
+                    zoom: 1.1;
+                    cursor: pointer;
+                }
+            }
+        }
+        li {
+            border: solid black .5px;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 15px 0;
+            font-size: 20px;
+            &:hover {
+                background-color: rgb(139, 194, 58);
+            }
+        }
+    }
+
+}
