@@ -64,9 +64,20 @@ export class ListasComponent implements OnInit {
     return this.listasService.delete(i, list);  
   }
 
-  addInDoing(item, newList) {
+  addInDoing(item) {
+    const index = this.toDoItems.indexOf(item);
+    if (index !== -1) {
+      this.toDoItems.splice(index, 1);
+      this.doingItems.push(item)
+    }
   }
 
-
+  addInDone(item) {
+    const index = this.doingItems.indexOf(item);
+    if (index !== -1) {
+      this.doingItems.splice(index, 1);
+      this.doneItems.push(item)
+    }
+  }
 
 }
