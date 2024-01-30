@@ -15,6 +15,5 @@ export class ListasService {
     list.splice(i, 1)
   }
 
-
   constructor() { }
 }

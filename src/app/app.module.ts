@@ -5,15 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListasComponent } from './components/listas/listas.component';
 import { ListasService } from './services/listas.service';
+import { ItemDetalhesComponent } from './components/item-detalhes/item-detalhes.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListasComponent
+    ListasComponent,
+    ItemDetalhesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [ListasService],
   bootstrap: [AppComponent]

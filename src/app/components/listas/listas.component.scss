@@ -6,6 +6,8 @@
     margin-top: 10vh;
     padding-top: 20px;
     margin: 30px 70px;
+    position: relative;
+    z-index: 1;
     li {
         width: 250px;
         word-wrap: break-word;
@@ -20,7 +22,7 @@
     }
 
     .to-do-list {
-        width: 350px;
+        width: 400px;
         box-shadow: 0 0 4px 5px lightgray;
         min-height: 450px;
         padding: 5px 10px;
@@ -33,8 +35,9 @@
             text-align: center;
             align-items: center;
             column-gap: 8px;
+            
             &:hover {
-                svg {
+                .svg-delete {
                     cursor: pointer;
                 }
             }
@@ -69,10 +72,14 @@
             transition: .5s;
             &:hover {
                 background-color: rgb(100, 7, 7);
-                color: white;
-                svg {
-                    fill: white;
-                }
+                color: white; 
+            }
+        }
+        svg {
+            transition: .3s;
+            &:hover {
+                zoom: 1.1;
+                cursor: pointer;
             }
         }
 
@@ -92,7 +99,13 @@
                 border-radius: 10px;
                 box-shadow: 0 3px 15px 1px gray;
                 svg {
-                    fill: black;
+                    transition: .3s;
+                    &:hover {
+                        zoom: 1.1;
+                        border-radius: 20px;
+                        box-shadow: 0 1px 2px 2px gray;
+                        cursor: pointer;
+                    }
                 }
             }
         }
@@ -136,10 +149,47 @@
                 padding-top: 11px;
             }
         }
+
+        .container-detalhes {
+            background-color: whitesmoke;
+            width: 350px;
+            height: 350px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            row-gap: 25px;
+            padding-top: 20px;
+            position: fixed;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+            left: 30%;
+            top: 29%;
+            overflow: auto;
+            p {
+                word-wrap: break-word;
+            }
+
+            .confirm-cancel {
+                width: 70px;
+                display: flex;
+                justify-content: space-between;
+            }
+            svg {
+                transition: .3s;
+                &:hover {
+                    zoom: 1.1;
+                    border-radius: 20px;
+                    box-shadow: 0 1px 2px 2px gray;
+                    cursor: pointer;
+                }
+            }
+        }
     }
 
     .doing-list {
-        width: 350px;
+        width: 400px;
         box-shadow: 0 0 4px 5px lightgray;
         min-height: 450px;
         padding: 5px 10px;
@@ -152,12 +202,6 @@
             text-align: center;
             align-items: center;
             column-gap: 8px;
-            &:hover {
-                svg {
-                    zoom: 1.1;
-                    cursor: pointer;
-                }
-            }
         }
         li {
             border: solid black .5px;
@@ -170,6 +214,14 @@
                 
             }
         }
+        svg {
+            transition: .3s;
+            &:hover {
+                zoom: 1.1;
+                cursor: pointer;
+            }
+        }
+        
     }
 
     .done-list {
@@ -199,10 +251,26 @@
             padding: 10px;
             margin: 15px 0;
             font-size: 20px;
+            background-color: rgb(39, 211, 39);
+            color: whitesmoke;
             &:hover {
                 background-color: rgb(139, 194, 58);
             }
         }
     }
 
+}
+
+.total {
+    margin: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h3 {
+        font-size: 25px;
+        font-weight: bold;
+    }
+    span {
+        font-weight: 100;
+    }
 }
