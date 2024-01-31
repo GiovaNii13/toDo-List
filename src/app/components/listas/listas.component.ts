@@ -47,7 +47,7 @@ export class ListasComponent implements OnInit {
 
   turnInputOn() {
     this.inputOn = !this.inputOn;
-    this.addOn = !this.addOn
+    this.addOn = !this.addOn;
     setTimeout(() => {
       this.newTaskInput.nativeElement.focus();
     }, 0)
@@ -100,7 +100,7 @@ export class ListasComponent implements OnInit {
     const index = this.doingItems.indexOf(item);
     if (index !== -1) {
       this.doingItems.splice(index, 1);
-      this.doneItems.push(item);      
+      this.doneItems.push(item);     
     }
   }
 
@@ -111,7 +111,7 @@ export class ListasComponent implements OnInit {
     if (index >= 0 && index < this.toDoItems.length) {
       this.detalhesOn = !this.detalhesOn;
       this.editingIndex = index;
-      this.newValueToEdit.nativeElement.value = this.toDoItems[index]
+      this.newValueToEdit.nativeElement.value = this.toDoItems[index];
 
     }
   }

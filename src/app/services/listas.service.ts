@@ -5,14 +5,14 @@ import { Injectable } from '@angular/core';
 })
 export class ListasService {
 
-  getToDoItens: any[] = [];
+  getToDoItens: [] = [];
 
   getDoingItems: any[] = [];
 
   getDoneItems: any[] = [];
 
   delete(i, list) {
-    list.splice(i, 1)
+    list.splice(i, 1);
   }
 
   constructor() { }
